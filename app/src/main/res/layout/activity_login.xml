@@ -5,74 +5,41 @@
     android:layout_height="match_parent"
     tools:context="com.example.userbehaviorexampleapp.LoginActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/login_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/blue"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/loginToolbar"
-            android:layout_gravity="center"
-            android:id="@+id/toolbar_title"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="18dp"/>
-
-    </androidx.appcompat.widget.Toolbar>
-
-
-    <!-- ALL THE LOGIN -->
-    <LinearLayout
+    <EditText
+        android:id="@+id/et_email_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:layout_marginTop="50dp"
-        android:layout_below="@id/login_toolbar"
-        android:orientation="vertical">
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/email"
+        android:minHeight="48dp"
+        android:inputType="textEmailAddress"
+        android:autofillHints="emailAddress"/>
 
-        <!-- ENTER USERNAME -->
-        <EditText
-            android:id="@+id/loginEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:hint="@string/email"/>
+    <EditText
+        android:id="@+id/et_password_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_email_login"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:hint="@string/password"
+        android:minHeight="48dp"
+        android:inputType="textPassword"/>
 
-        <!-- ENTER PASSWORD -->
-        <EditText
-            android:id="@+id/loginPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:hint="@string/password"/>
-
-        <!-- BUTTON FOR START THE LOGIN -->
-        <Button
-            android:id="@+id/btLogin"
-            android:theme="@style/Widget.AppCompat.Button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/loginToolbar"/>
-
-        <!-- BUTTON FOR CHANGE TO THE REGISTER LAYOUT -->
-        <Button
-            android:id="@+id/btnLinkToRegisterScreen"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:text="@string/btn_link_to_register"
-            android:textAllCaps="false"
-            android:textSize="15dp"
-            android:textColor="#3f51b5"/>
-
-    </LinearLayout>
-
+    <Button
+        android:layout_below="@id/et_password_login"
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/btn_link_to_login"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>

@@ -1,11 +1,14 @@
 <resources>
     <string name="app_name">UserBehaviorExampleApp</string>
-    <string name="password">password</string>
-    <string name="email">email</string>
-    <string name="loginToolbar">Log in</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
     <string name="btn_link_to_register">Sign Up</string>
-    <string name="registerToolbar">Sign Up</string>
-    <string name="name"> $name </string>
+    <string name="name"> Name</string>
     <string name="btn_link_to_login">Login</string>
     <string name="btRegister">Sign Up</string>
+    <string name="to_signup">Dont have account? Signup here</string>
+    <string name="to_login">Already have account? Login here</string>
+    <string name="explore">Explore</string>
+    <string name="checkout">Checkout</string>
+    <string name="logout">Logout</string>
 </resources>
