@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "446037725314",
+    "project_id": "learnuserbehaviordata",
+    "storage_bucket": "learnuserbehaviordata.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:446037725314:android:97f2beb6cb142614f8649b",
+        "android_client_info": {
+          "package_name": "com.example.userbehaviorexampleapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "446037725314-jqsalaikoo3ivhf9252osusktmtrjprg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDShE49Rj33kK1C5EDe_vQE0VxwNvIvKEM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "446037725314-jqsalaikoo3ivhf9252osusktmtrjprg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
