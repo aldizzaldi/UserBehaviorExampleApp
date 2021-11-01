@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.firebase.analytics.ktx.analytics
+import com.google.firebase.ktx.Firebase
 
 class EventActivity : AppCompatActivity() {
 
@@ -16,6 +18,8 @@ class EventActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_event)
+        firebaseAnalytics = Firebase.analytics
+        supportActionBar!!.setTitle("Event")
 
         val email = intent.getStringExtra("email").toString()
 
@@ -26,16 +30,21 @@ class EventActivity : AppCompatActivity() {
         btnExplore.setOnClickListener {
             val bundle = Bundle()
             bundle.putString("email", email)
-//            firebaseAnalytics.logEvent(FirebaseAnalytics.Event., bundle)
+            bundle.putString("item", "Pants")
+            firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_ITEM, bundle)
             showToast("Event explore")
         }
 
         btnCheckout.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putString("email", email)
+            bundle.putString("item", "Pants")
+            firebaseAnalytics.logEvent(FirebaseAnalytics.Event.PURCHASE, bundle)
             showToast("Event Checkout")
         }
 
         btnLogout.setOnClickListener {
-            finish()
+            finishAffinity()
         }
     }
 

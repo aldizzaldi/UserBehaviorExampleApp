@@ -5,7 +5,21 @@
     android:layout_height="match_parent"
     tools:context="com.example.userbehaviorexampleapp.SignupActivity">
 
+
     <EditText
+        android:id="@+id/et_name_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/name"
+        android:minHeight="48dp"
+        android:inputType="textEmailAddress"
+        android:autofillHints="emailAddress"/>
+
+    <EditText
+        android:layout_below="@id/et_name_signup"
         android:id="@+id/et_email_signup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

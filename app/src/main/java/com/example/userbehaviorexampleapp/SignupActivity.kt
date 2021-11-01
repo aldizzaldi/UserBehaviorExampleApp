@@ -25,6 +25,7 @@ class SignupActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
         firebaseAnalytics = Firebase.analytics
+        supportActionBar!!.setTitle("Sign Up")
 
         etEmail = findViewById(R.id.et_email_signup)
         etPassword = findViewById(R.id.et_password_signup)

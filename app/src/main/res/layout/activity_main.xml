@@ -6,9 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tv_tittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tittle"
+        android:textStyle="bold"
+        android:textSize="32sp"
+        android:textColor="@color/black"/>
+
     <Button
         android:id="@+id/btn_to_login"
-        android:layout_marginTop="300dp"
+        android:layout_below="@id/tv_tittle"
+        android:layout_marginTop="70dp"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"

@@ -23,6 +23,10 @@ class MainActivity : AppCompatActivity() {
         btnLogin = findViewById(R.id.btn_to_login)
         btnSignup = findViewById(R.id.btn_to_signup)
 
+        val bundle = Bundle()
+        bundle.putString("event", "Aplikasi dibuka")
+        firebaseAnalytics.logEvent(FirebaseAnalytics.Event.APP_OPEN, bundle)
+
         btnLogin.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
         }

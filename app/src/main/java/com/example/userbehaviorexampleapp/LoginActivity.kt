@@ -22,6 +22,7 @@ class LoginActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         firebaseAnalytics = Firebase.analytics
+        supportActionBar!!.setTitle("Login")
 
         etEmail = findViewById(R.id.et_email_login)
         etPassword = findViewById(R.id.et_password_login)
@@ -37,9 +38,9 @@ class LoginActivity: AppCompatActivity() {
             firebaseAnalytics.logEvent(FirebaseAnalytics.Event.LOGIN, bundle)
             Toast.makeText(applicationContext,"Login berhasil", Toast.LENGTH_SHORT).show()
 
-//            val intent = Intent(this, EventActivity::class.java)
-//            intent.putExtra("email", email)
-//            startActivity(intent)
+            val intent = Intent(this, EventActivity::class.java)
+            intent.putExtra("email", email)
+            startActivity(intent)
         }
     }
 }
