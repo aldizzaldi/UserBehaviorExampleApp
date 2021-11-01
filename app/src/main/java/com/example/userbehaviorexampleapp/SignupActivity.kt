@@ -16,6 +16,7 @@ class SignupActivity: AppCompatActivity() {
 //    private val firebaseAuth = FirebaseAuth.getInstance()
 //    private val firebaseFirestore = FirebaseFirestore.getInstance()
 
+    private lateinit var etName : EditText
     private lateinit var etEmail : EditText
     private lateinit var etPassword : EditText
     private lateinit var btnSignup : Button
@@ -27,15 +28,18 @@ class SignupActivity: AppCompatActivity() {
         firebaseAnalytics = Firebase.analytics
         supportActionBar!!.setTitle("Sign Up")
 
+        etName = findViewById(R.id.et_name_signup)
         etEmail = findViewById(R.id.et_email_signup)
         etPassword = findViewById(R.id.et_password_signup)
         btnSignup = findViewById(R.id.btn_signup)
 
         btnSignup.setOnClickListener {
-            var email = etEmail.text.toString()
-            var password = etPassword.text.toString()
+            val name = etName.text.toString()
+            val email = etEmail.text.toString()
+            val password = etPassword.text.toString()
 
             val bundle = Bundle()
+            bundle.putString("name", name)
             bundle.putString("email", email)
             bundle.putString("password", password)
             firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SIGN_UP, bundle)
